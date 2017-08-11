@@ -1,0 +1,6 @@
+﻿@model PartialsDemo.Models.PageOneViewModel
+
+<h1>Welcome to page 1</h1>
+<h2>The special text is @Model.SomeText</h2>
+
+@{Html.RenderPartial("_MagicNumber", Model.Number);}

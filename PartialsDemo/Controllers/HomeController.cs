@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PartialsDemo.Models;
 
 namespace PartialsDemo.Controllers
 {
@@ -13,18 +14,18 @@ namespace PartialsDemo.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult PageOne()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(new PageOneViewModel() { SomeText = "Page one stuff", Number = 12345 });
         }
 
-        public ActionResult Contact()
+        public ActionResult PageTwo()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(new PageTwoViewModel()
+            {
+                UserEmail = "info@lakewoodprogramming.com",
+                Number = 987654
+            });
         }
     }
 }

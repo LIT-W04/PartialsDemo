@@ -1,0 +1,7 @@
+﻿@model PartialsDemo.Models.PageTwoViewModel
+
+<h1>Welcome to page 2</h1>
+<h2>The email address you're looking for is @Model.UserEmail</h2>
+
+@{Html.RenderPartial("_MagicNumber", Model.Number);}
+
